@@ -28,10 +28,10 @@ public class MainController {
     private ProductServise productServise;
 
     @GetMapping("/")
-    public String index(ModelMap model, HttpServletResponse response) {
-        System.out.println(response.getStatus());
+    public String index(ModelMap model) {
 
         model.addAttribute("title", "Main - helenatex");
+        model.addAttribute("categories", categoryServise.findAll());
 
         return "index";
     }
@@ -75,6 +75,7 @@ public class MainController {
     @GetMapping("/product-{idProduct}")
     public String product(@PathVariable("idProduct") Integer id, Model model) {
         model.addAttribute("product", productServise.findOneProduct(id));
+//        categoryServise.
         return "simpleProduct";
     }
 
@@ -85,15 +86,6 @@ public class MainController {
 
         return "categoriesPage";
     }
-
-//    @GetMapping("/")
-//    public String products(Model model) {
-//        model.addAttribute("products", productServise.findAll());
-//        return "productsPage";
-//    }
-
-
-
 
 
 }

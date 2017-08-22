@@ -35,13 +35,14 @@
                     <h2>Категорії</h2>
                     <ul class="category-list">
                         <c:forEach items="${categories}" var="category">
-                            <li><a href="/category-${category.idCategory}">${category.categoryName}</a></li>
+                            <li><a href="/category-${category.idCategory}">${category.categoryName}</a>
                             <c:if test="${category.subCategoryName!=null}">
 
                                 <ul>
                                     <li><a href="/category-${category.idCategory}">${category.subCategoryName}</a></li>
                                 </ul>
                             </c:if>
+                            </li>
 
                         </c:forEach>
                     </ul>

@@ -10,22 +10,14 @@
     <div class="category">
         <div class="container">
             <div class="row">
-                <div class="col-3"><a href="./category.html">
-                    <img src="https://placehold.it/265x265" alt="category 1">
-                    <h3>category 1</h3>
+                <c:forEach items="${categories}" var="category" end="3">
+
+                <div class="col-3"><a href="/category-${category.idCategory}">
+                    <img src="${category.categoryImage}" width="265px" height="auto" alt="${category.categoryName}">
+                    <h3>${category.categoryName}</h3>
                 </a></div>
-                <div class="col-3"><a href="./category.html">
-                    <img src="https://placehold.it/265x265" alt="category 2">
-                    <h3>category 2</h3>
-                </a></div>
-                <div class="col-3"><a href="./category.html">
-                    <img src="https://placehold.it/265x265" alt="category 3">
-                    <h3>category 3</h3>
-                </a></div>
-                <div class="col-3"><a href="./category.html">
-                    <img src="https://placehold.it/265x265" alt="category 4">
-                    <h3>category 4</h3>
-                </a></div>
+                </c:forEach>
+
             </div>
         </div>
     </div>

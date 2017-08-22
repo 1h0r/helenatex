@@ -18,10 +18,8 @@
                         <img src="${product.generalProductImage}" width="410px" height="auto" onclick="openModal(0)" class="product-image-item">
 
                         <div class="cover-product-image">
-                            <%--<c:forEach items="${product}" var="prod">--%>
-
-                            <%--<img src="${prod.images}" onclick="openModal()" class="product-image-item" alt="1">--%>
-                            <%--</c:forEach>--%>
+<%--&lt;%&ndash;&ndash;%&gt;<c:forEach items="${product.images}" var=""--%>
+                            <img src="${product.images[0]}" onclick="openModal()" class="product-image-item" alt="1">
                         </div>
                         <div id="imageNav">
                             <a class="i-prev" onclick="prevImg()">&#10094;</a>
