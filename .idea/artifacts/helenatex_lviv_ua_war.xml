@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="helenatex.lviv.ua:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="helenatex-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="helenatex.lviv.ua:war exploded" />
+    </root>
+  </artifact>
+</component>
